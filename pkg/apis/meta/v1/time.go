@@ -65,6 +65,14 @@ func (t *Time) IsZero() bool {
 	return t.Time.IsZero()
 }
 
+// String returns the time formatted using the format string
+func (t *Time) String() string {
+	if t == nil {
+		return ""
+	}
+	return t.Time.String()
+}
+
 // Before reports whether the time instant t is before u.
 func (t *Time) Before(u *Time) bool {
 	if t != nil && u != nil {
